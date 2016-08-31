@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsHeaderViewController">
+            <connections>
+                <outlet property="contentScrollView" destination="jcf-df-pmF" id="Waw-nI-BQQ"/>
+                <outlet property="titleScrollView" destination="aZF-Ib-N0B" id="K0g-VA-qzV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="05C-nZ-3h7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwh-xb-KTy">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeV-ez-aol">
+                            <rect key="frame" x="20" y="17" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="0UU-h2-RHp"/>
+                                <constraint firstAttribute="width" constant="30" id="15S-1R-ecm"/>
+                            </constraints>
+                            <state key="normal" image="向左.png"/>
+                            <connections>
+                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="k53-Pw-9hC"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="资讯" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-IG-66W">
+                            <rect key="frame" x="270" y="14" width="60" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Cds-pr-dkC"/>
+                                <constraint firstAttribute="height" constant="35" id="XfD-oz-A8z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.030915692448616028" green="0.66467076539993286" blue="0.97639375925064087" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Uox-IG-66W" firstAttribute="centerY" secondItem="Lwh-xb-KTy" secondAttribute="centerY" id="00O-rU-4Lm"/>
+                        <constraint firstAttribute="height" constant="64" id="4vU-GE-ceo"/>
+                        <constraint firstItem="SeV-ez-aol" firstAttribute="leading" secondItem="Lwh-xb-KTy" secondAttribute="leading" constant="20" id="FaK-Zn-CMI"/>
+                        <constraint firstItem="SeV-ez-aol" firstAttribute="centerY" secondItem="Lwh-xb-KTy" secondAttribute="centerY" id="nNj-Qx-0nv"/>
+                    </constraints>
+                </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZF-Ib-N0B">
+                    <rect key="frame" x="0.0" y="64" width="600" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="VfX-ux-WYu"/>
+                    </constraints>
+                </scrollView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcf-df-pmF">
+                    <rect key="frame" x="0.0" y="111" width="600" height="489"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="2TP-y0-pl3"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Uox-IG-66W" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="0bh-gt-FTO"/>
+                <constraint firstAttribute="trailing" secondItem="jcf-df-pmF" secondAttribute="trailing" id="10E-Kc-AtS"/>
+                <constraint firstAttribute="trailing" secondItem="aZF-Ib-N0B" secondAttribute="trailing" id="K2s-pm-4Gf"/>
+                <constraint firstItem="Lwh-xb-KTy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="MVF-pL-YhN"/>
+                <constraint firstItem="aZF-Ib-N0B" firstAttribute="top" secondItem="Lwh-xb-KTy" secondAttribute="bottom" id="Mjv-KZ-w1i"/>
+                <constraint firstItem="aZF-Ib-N0B" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OPM-9i-mFK"/>
+                <constraint firstAttribute="trailing" secondItem="Lwh-xb-KTy" secondAttribute="trailing" id="Vog-rC-hx8"/>
+                <constraint firstItem="Lwh-xb-KTy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vun-iG-nXR"/>
+                <constraint firstItem="jcf-df-pmF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h9p-rR-jyE"/>
+                <constraint firstItem="jcf-df-pmF" firstAttribute="top" secondItem="aZF-Ib-N0B" secondAttribute="bottom" constant="5" id="pJa-3U-aRU"/>
+                <constraint firstAttribute="bottom" secondItem="jcf-df-pmF" secondAttribute="bottom" id="xoS-ke-9Od"/>
+            </constraints>
+            <point key="canvasLocation" x="337" y="309"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="向左.png" width="32" height="32"/>
+    </resources>
+</document>

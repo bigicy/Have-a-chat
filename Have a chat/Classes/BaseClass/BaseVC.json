@@ -1,0 +1,17 @@
+[
+ {
+ "controllerName":"MessageViewController",
+ "title":"消息",
+ "image":"消息"
+ },
+ {
+ "controllerName":"ContactViewController",
+ "title":"联系人",
+ "image":"联系人"
+ },
+ {
+ "controllerName":"OutlookViewController",
+ "title":"发现",
+ "image":"动态"
+ }
+ ]
